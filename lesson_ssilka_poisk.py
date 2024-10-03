@@ -15,7 +15,7 @@ time.sleep(5)
 # link.click()
 # time.sleep(10)
 
-link = driver.find_element(By.LINK_TEXT,'224592')
+link = driver.find_element(By.LINK_TEXT,'224592') # Поиск текста с гипер-ссылкой
 link.click()
 time.sleep(10)
 

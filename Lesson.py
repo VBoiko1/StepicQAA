@@ -4,7 +4,7 @@ import time
 
 import math
 
-link = "http://suninjuly.github.io/find_link_text"
+link = " http://suninjuly.github.io/find_xpath_form"
 
 
 
@@ -13,8 +13,8 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    link = browser.find_element(By.LINK_TEXT, str(math.ceil(math.pow(math.pi, math.e)*10000)))
-    link.click()
+    
+    
 
     input1 = browser.find_element(By.TAG_NAME,"input")
     input1.send_keys("Ivan")
@@ -24,7 +24,7 @@ try:
     input3.send_keys("Smolensk")
     input4 = browser.find_element(By.ID, "country")
     input4.send_keys("Russia")
-    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+    button = browser.find_element(By.XPATH, "//button[normalize-space()='Submit']")
     button.click()
 
 finally:

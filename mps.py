@@ -24,7 +24,7 @@ textarea = driver.find_element(By.XPATH, "//input[@class='p-element ng-tns-c45-3
 
 # Напишем текст ответа в найденное поле "Организация"
 textarea.send_keys("9723098918")
-time.sleep(3)
+time.sleep(5)
 
 # Выбор организации из выподающего списка
 submit_button = driver.find_element(By.CSS_SELECTOR, "div.ng-star-inserted")
@@ -44,7 +44,7 @@ submit_button.click()
 time.sleep(3)
 
 # Выбор "Места заполнения анкеты" по платформе из списка
-submit_button = driver.find_element(By.XPATH, "//li[@aria-label='ЛК 44']")
+submit_button = driver.find_element(By.CSS_SELECTOR, "p-dropdownitem:nth-child(4)") #(By.XPATH, "//li[@aria-label='ЛК 44']")
 
 # Нажать на выбранную организацию
 submit_button.click()
@@ -58,14 +58,13 @@ textarea.click()
 time.sleep(3)
 
 #Поиск кноки "Загрузка файла с ТРУ"
-#textarea = driver.find_element(By.XPATH, "//*[contains(text(),'Загрузить файл с ТРУ')]")
+textarea = driver.find_element(By.XPATH, "//*[contains(text(),'Загрузить файл с ТРУ')]")
 
 # Выбрать файл для загрузки
 
 
 # Поиск кнопки "Загрузить список товаров"
-textarea = driver.find_element(By.XPATH, "//*[contains(text(),'Загрузить список товаров')]")
-
+textarea = driver.find_element(By.XPATH, "//*[contains(text(),'Загрузить список товаров')]")  
 textarea.click()
 time.sleep(3)
 
