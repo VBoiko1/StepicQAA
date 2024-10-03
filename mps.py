@@ -1,5 +1,5 @@
 import time
-
+import os
 # webdriver это и есть набор команд для управления браузером
 from selenium import webdriver
 
@@ -58,14 +58,16 @@ textarea.click()
 time.sleep(3)
 
 #Поиск кноки "Загрузка файла с ТРУ"
-textarea = driver.find_element(By.XPATH, "//*[contains(text(),'Загрузить файл с ТРУ')]")
+#textarea = driver.find_element(By.XPATH, "//*[contains(text(),'Загрузить файл с ТРУ')]")
 
 # Выбрать файл для загрузки
-
+current_dir = os.path.abspath(os.path.dirname('mps.py'))
+file = 'file.xlsx'
+path = os.path.join(current_dir, file)
 
 # Поиск кнопки "Загрузить список товаров"
 textarea = driver.find_element(By.XPATH, "//*[contains(text(),'Загрузить список товаров')]")  
-textarea.click()
+textarea.send_keys(path)
 time.sleep(3)
 
 

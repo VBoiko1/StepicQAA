@@ -17,7 +17,8 @@ try:
 
     x_element = browser.find_element(By.XPATH, "//*[@id='treasure']")
     x = x_element.get_attribute("valuex") # Записывает значение атрибута из консоли (В данном примере атрибут - "valuex")
-    #x = x_element.text # Копирует и записывает значение 
+    
+    x = x_element.text # Копирует и записывает значение 
 
     y = calc(x)
 
